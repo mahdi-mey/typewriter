@@ -28,6 +28,25 @@
     </style>
 </head>
 <body>
+    
     <h1 class="typewriter"></h1>
+
+    <script>
+        const wrapper = document.querySelector('.typewriter')
+        const text = 'my name is mahdi meydando'
+        let index = 0
+
+        function typeWriter() {
+            if (index < text.length) {
+                wrapper.innerHTML += text[index]
+                index++
+            }
+            
+            setTimeout(() => {
+                typeWriter()
+            }, 100);
+        }
+        typeWriter()
+    </script>
 </body>
 </html>
